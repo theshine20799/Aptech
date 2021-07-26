@@ -1,0 +1,23 @@
+<% var i=0; %>
+<% while(i<=2) { %>
+    <table border="1" style=“width:100%”>
+      <tr> 
+        <th>ID Student</th>
+        <th>Name Student</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Address</th>  
+        
+      </tr> 
+      <tr>
+        <td> <%- Student[i].ID_Student %> </td>
+        <td> <%= Student[i].Name_Student %> </td>
+        <td> <%= Student[i].Gender %> </td>
+        <td> <%= Student[i].Email %> </td>
+        <td> <%= Student[i].Address %> </td>
+        
+      </tr>
+       
+     </table>
+     <% i=i+1; %>
+ <% } %>
