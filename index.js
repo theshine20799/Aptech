@@ -2,14 +2,14 @@ const http=require('http');
 const express = require("express");
 const bodyParser=require('body-parser');
 const morgan= require('morgan');
-const urlencodedParser = bodyParser.urlencoded({ extended: false })
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
 const app=express();
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true }));// for parsing application/x-www-form-urlencoded
 //const ExPHP= require ('php-express');
 app.use(express.static('./public'));
 //app.use(morgan('short'));
-app.listen(3000,'0.0.0.0',() => console.log("Server running on port 3000"));
+app.listen(process.env.PORT || 3000,'0.0.0.0',() => console.log("Server running on port 3000"));
 //cau hinh View Engine PHP
 var path = require('path');
 //var router = express.Router();
